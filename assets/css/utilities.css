@@ -1,0 +1,80 @@
+.content-box {
+    padding-inline: 2rem;
+}
+
+.content {
+    max-width: 90em;
+    margin: auto;
+}
+
+.btn {
+  padding-inline: 1.25rem;
+  display: inline-block;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, .2);
+    position: absolute;
+    border-radius: 50%;
+    transition: width .3s ease, height .3s ease;
+   
+  }
+}
+
+.btn:hover::after {
+    width: 6rem;
+    height: 6rem; 
+}
+
+.desktop-only {
+    display: none;
+}
+
+.mobile-only {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-betw {
+    justify-content: space-between;
+}
+
+.flex-just-center {
+    justify-content: center;
+}
+
+.gap-16 {
+    gap: 1rem;
+}
+
+@media (min-width: 64em) {
+    .desktop-only {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+}
