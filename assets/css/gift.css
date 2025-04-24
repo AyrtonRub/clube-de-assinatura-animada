@@ -1,0 +1,144 @@
+.gift {
+  & .content-box {
+    height: 15rem;
+    position: relative;
+    text-align: center;
+
+    & p {
+      line-height: 1.4;
+      font-size: var(--fs-base);
+    }
+
+    & div {
+      width: 2.5rem;
+      position: absolute;
+
+      &:nth-of-type(1) {
+        right: 7%;
+        bottom: 10%;
+        transform: rotate(15deg);
+      }
+
+      &:nth-of-type(2) {
+        right: 20%;
+        top: 10%;
+        transform: rotate(15deg);
+      }
+      &:nth-of-type(3) {
+        left: 8%;
+        bottom: 15%;
+        transform: rotate(-35deg);
+      }
+    }
+  }
+}
+
+@media (min-width: 64em) {
+  .gift {
+    & .content-box {
+      height: 25rem;
+
+      &:hover p {
+        & > span:nth-child(1) {
+          animation: color 200ms linear forwards;
+        }
+
+        & > span:nth-child(2) {
+          animation: color-emphasy 200ms linear forwards;
+        }
+
+        & > span:nth-child(3) {
+          animation: color 200ms 500ms linear forwards;
+        }
+
+        & > span:nth-child(4) {
+          animation: color-emphasy 200ms 500ms linear forwards;
+        }
+
+        & > span:nth-child(5) {
+          animation: color 200ms 1s linear forwards;
+        }
+
+        & > span:nth-child(6) {
+          animation: color-emphasy 200ms 1s linear forwards;
+        }
+      }
+
+      &:hover > div {
+        &:nth-of-type(1) {
+            animation: img-appear 200ms 1s linear forwards;
+        }
+        &:nth-of-type(2) {
+            animation: img-appear 200ms linear forwards;
+        }
+        &:nth-of-type(3) {
+            animation: img-appear 200ms 500ms linear forwards;
+        }
+      }
+
+      & p {
+        line-height: 2;
+        color: rgba(226, 231, 233, 0.5);
+
+        & span {
+          &.emphasy {
+            font-weight: 700;
+          }
+        }
+      }
+
+      & div {
+        width: 5.5rem;
+        transition: transform 0.2s linear;
+        width: 0;
+
+        &:nth-of-type(1) {
+          right: 7%;
+          bottom: 10%;
+          transform: rotate(-15deg);
+          &:hover {
+            transform: rotate(-5deg) scale(1.1);
+          }
+        }
+
+        &:nth-of-type(2) {
+          right: 48%;
+          top: 10%;
+          transform: rotate(15deg);
+          &:hover {
+            transform: rotate(25deg) scale(1.1);
+          }
+        }
+
+        &:nth-of-type(3) {
+          left: 10%;
+          bottom: 10%;
+          transform: rotate(105deg);
+          &:hover {
+            transform: rotate(115deg) scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes color {
+  100% {
+    color: var(--text-body);
+  }
+}
+
+@keyframes color-emphasy {
+  100% {
+    color: var(--blue-light);
+  }
+}
+
+@keyframes img-appear {
+  from {
+    width: 0;
+  } to {
+    width: 5.5rem;
+  }
+}

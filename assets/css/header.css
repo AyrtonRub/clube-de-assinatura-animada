@@ -1,6 +1,8 @@
 header {
   position: relative;
   height: 29rem;
+  padding-top:1.25rem;
+  margin-bottom: 2rem;
 
   & .nav-bar {
     margin-bottom: 3rem;
@@ -41,6 +43,8 @@ header {
 @media (min-width: 64em) {
   header {
     height: 59.25rem;
+    padding-top: 4rem;
+    margin-bottom: 6rem;
 
     & .nav-bar {
       margin-bottom: 10rem;
