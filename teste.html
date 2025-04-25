@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fora {
+            padding: 1rem ;
+            border: 1px solid black;
+            /* overflow: hidden; */
+        }
+        .dentro {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            /* border-radius: 50%; */
+            transform: translate(0, 0) rotate(0deg);
+            transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        
+        .fora:hover .dentro{
+            transform: translate(-90%, 50%) rotate(-45deg); 
+        }
+
+        @keyframes mover {
+            50% {
+                transform: translate(-95%, 55%) rotate(-45deg);
+            } 100% {
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fora">
+        <div class="dentro">
+            
+        </div>
+    </div>
+</body>
+</html>
+

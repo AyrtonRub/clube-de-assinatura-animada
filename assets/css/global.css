@@ -57,9 +57,9 @@ img {
     width: 100%;
 }
 
-/* html {
+html {
     zoom: 50%;
-} */
+}
 
 @media (min-width: 64em) {
     :root {

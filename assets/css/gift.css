@@ -136,9 +136,7 @@
 }
 
 @keyframes img-appear {
-  from {
-    width: 0;
-  } to {
+   to {
     width: 5.5rem;
   }
 }
