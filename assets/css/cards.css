@@ -1,0 +1,61 @@
+.cards {
+  & .content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    & h2 {
+      width: 14rem;
+      text-align: center;
+    }
+
+    & .cards-box {
+      article {
+        padding: 2rem 2rem 1.75rem 2rem;
+        border: 1px solid var(--shape-stroke);
+        border-radius: 1.5rem;
+        background-color: var(--shape-base);
+        height: 25rem;
+
+        & > div:nth-of-type(1) {
+          & .flat {
+            color: var(--blue-light);
+            font-weight: 700;
+          }
+
+          & .price-box {
+            & .price {
+              & span {
+                font-size: 2.5rem;
+                font-weight: 700;
+              }
+            }
+
+            & .total-price {
+              color: var(--text-label);
+              font-size: 0.875rem;
+            }
+          }
+
+
+        }
+
+        & > div:nth-of-type(2) {
+            & ul[role="list"] li {
+                font-size: .75rem;
+                & img {
+                    width: 0.87881rem;
+                }
+            }
+
+            & .btn {
+                background-color: var(--blue-dark) ;
+                font-size: .875rem;
+                width: 100%;
+            }
+        }
+      }
+    }
+  }
+}

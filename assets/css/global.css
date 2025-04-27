@@ -57,9 +57,13 @@ img {
     width: 100%;
 }
 
-html {
-    zoom: 60%;
+ul[role="list"] li {
+    list-style: none;
 }
+
+/* html {
+    zoom: 60%;
+} */
 
 @media (min-width: 64em) {
     :root {

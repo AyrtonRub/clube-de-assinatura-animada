@@ -141,12 +141,12 @@
 
         & > img:nth-child(3) {
           width: 13.875rem;
-          transform: translate(0) rotate(0);
+          transform: translate(58%) rotate(0);
         }
 
         & > img:nth-child(4) {
           width: 13.875rem;
-          transform: translate(0%, -0%) rotate(0deg);
+          transform: translate(58%, 0%) rotate(0deg);
         }
 
         & > img:nth-child(5) {
@@ -363,7 +363,7 @@
     transform: translate(175%) rotate(22.093deg);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(58%, 0);
   }
 }
 
@@ -372,7 +372,7 @@
     transform: translate(120%, -20%) rotate(11.717deg);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(58%, 0);
   }
 }
 
