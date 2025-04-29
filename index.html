@@ -103,15 +103,15 @@
 
       </section>
 
-      <section class="cards">
+      <section class="cards" id="card">
         <div class="content-box">
           <h2>
             Assinatura 
             Encantos Literários
           </h2>
 
-          <div class="cards-box flex flex-column flex-center gap-16">
-            <article class="flex flex-column flex-betw">
+          <div class="cards-box">
+            <article class="flex flex-column flex-betw " id="article">
               
               <div class="flex flex-column gap-24">
                 <span class="flat">
@@ -150,12 +150,18 @@
               </div>
             </article>
 
-            <article class="flex flex-column flex-betw">
+            <article class="flex flex-column flex-betw active">
               
               <div class="flex flex-column gap-24">
-                <span class="flat">
-                  Semestral
-                </span>
+                <div class="flex flex-center flex-betw">
+                  <span class="flat">
+                    Semestral
+                  </span>
+
+                  <span class="popularny">
+                    popular
+                  </span>
+                </div>
 
                 <div class="price-box flex flex-column gap-8">
                   <div class="price">
@@ -172,20 +178,20 @@
               <div class="flex flex-column gap-24">
                 <ul role="list" class="flex flex-column gap-12">
                   <li class="flex gap-8 flex-center">
-                    <img src="assets/imgs/star-bule.svg" alt="">
+                    <img src="assets/imgs/star-pink.svg" alt="">
                     Kit mensal com livro temático
                   </li>
                   <li class="flex gap-8 flex-center">
-                    <img src="assets/imgs/star-bule.svg" alt="">
+                    <img src="assets/imgs/star-pink.svg" alt="">
                     Broche e marca páginas exclusivo
                   </li>
                   <li class="flex gap-8 flex-center">
-                    <img src="assets/imgs/star-bule.svg" alt="">
+                    <img src="assets/imgs/star-pink.svg" alt="">
                     Acesso à comunidade literária
                   </li>
 
                   <li class="flex gap-8 flex-center">
-                    <img src="assets/imgs/star-bule.svg" alt="">
+                    <img src="assets/imgs/star-pink.svg" alt="">
                     Membro premium do clube
                   </li>
                 </ul>
@@ -194,7 +200,7 @@
               </div>
             </article>
 
-            <article class="flex flex-column flex-betw">
+            <article class="flex flex-column flex-betw " id="article">
               
               <div class="flex flex-column gap-24">
                 <span class="flat">
@@ -243,9 +249,35 @@
                 <a href="#" class="btn">Assinar anual</a>
               </div>
             </article>
+            <img src="assets/imgs/Bunny.svg" alt="" class="desktop-only bunny">
           </div>
         </div>
       </section>
     </div>
+
+    <script>
+      const card = document.querySelector('#card')
+
+      const article = document.querySelectorAll('#article')
+      const articles = document.querySelectorAll('article')
+
+      card.addEventListener('mouseenter', function() {
+        article.forEach(el => {
+          el.classList.add('hovered')
+        })
+      })
+
+      articles.forEach(el => {
+        el.addEventListener('mouseenter', function() {
+          el.classList.remove('active')
+          el.classList.add('active')
+        })
+
+        el.addEventListener('mouseleave', function() {
+          el.classList.remove('active')
+        })
+
+      } )
+    </script>
   </body>
 </html>
